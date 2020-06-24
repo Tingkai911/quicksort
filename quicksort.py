@@ -4,7 +4,7 @@ import random
 def main():
     arr = []
     num = 0
-    with open('quicksortarray.txt', 'r') as file:
+    with open('QuickSort_List.txt', 'r') as file:
         for line in file:
             num += 1
             arr.append(int(line))
@@ -32,8 +32,8 @@ def quickSort(arr, start, end):
     pivot_index = choosePivot(arr, start, end)
 
     partition_index = partition(arr, start, end, pivot_index)
-    # recursive calls of array with length = start - end has a total of length - 1 comparisons
-    count = end - start - 1
+    # recursive calls of array with length = end - start + 1 has a total of length - 1 = end - start comparisons
+    count = end - start
 
     count += quickSort(arr, start, partition_index - 1)
     count += quickSort(arr, partition_index + 1, end)
