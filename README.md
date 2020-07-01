@@ -6,6 +6,6 @@ pseudo code as follows
 quicksort (array A, length n)
 - if n == 1, return
 - randomly choose a pivot, p
-- partition A around p such that everything to the left of p is <p and everything right of p is >p
+- partition A around p such that everything to the left of p is smaller than p and everything right of p is larger than p
 - recursively sort <p array
 - recursively sort >p array
